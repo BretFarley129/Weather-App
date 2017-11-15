@@ -1,0 +1,13 @@
+<h1>Chicago, IL</h1>
+<div id="left">
+    <div *ngIf="weather['main']">
+        <p>Humidity: {{weather['main']['humidity']}}</p>
+        <p>Temp: {{weather['main']['temp']}}</p>
+        <p>High: {{weather['main']['temp_max']}}</p>
+        <p>Low: {{weather['main']['temp_min']}}</p>
+        <p>Status: {{weather['weather'][0]['main']}}</p>
+    </div>
+</div>
+<div id="right">
+    <p>picture of Chicago</p>
+</div>

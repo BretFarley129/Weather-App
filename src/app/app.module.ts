@@ -1,18 +1,36 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
 import { AppRoutingModule } from './app-routing.module';
+
+import { WeatherService } from './weather.service'
+
 import { AppComponent } from './app.component';
+import { SeatlleComponent } from './seatlle/seatlle.component';
+import { SanJoseComponent } from './san-jose/san-jose.component';
+import { BurbankComponent } from './burbank/burbank.component';
+import { DallasComponent } from './dallas/dallas.component';
+import { DcComponent } from './dc/dc.component';
+import { ChicagoComponent } from './chicago/chicago.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SeatlleComponent,
+    SanJoseComponent,
+    BurbankComponent,
+    DallasComponent,
+    DcComponent,
+    ChicagoComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpModule
   ],
-  providers: [],
+  providers: [WeatherService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
